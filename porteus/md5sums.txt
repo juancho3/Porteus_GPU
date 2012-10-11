@@ -1,0 +1,9 @@
+1c44e62b3cb89c2c57aaf9b7f1888b84  ../boot/vmlinuz
+e490fc29ccc753f774e6cc13da293ff5  ../boot/initrd.xz
+5ec58045230e820b4a470545bb83a97a  ./base/000-kernel.xzm
+9a18650c33754c52013cf7214a577f01  ./base/001-core.xzm
+63e68d5fc74611eb27cb06d53fa6accf  ./base/002-xorg.xzm
+ff0deb5a6bfe8ed7a79ae08af02141ff  ./base/003-lxde.xzm
+b1c4d9566ece9f43304479a1d315090d  ./base/004-kde.xzm
+62fdbfd615391126aee643f4cc0348d9  ./base/005-devel.xzm
+efd946ecd574bfd032989c9f1cd124d5  ./base/006-firefox.xzm
