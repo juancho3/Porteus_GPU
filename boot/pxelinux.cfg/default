@@ -1,0 +1,111 @@
+PROMPT 0
+TIMEOUT 90
+DEFAULT /syslinux/vesamenu.c32 ~
+IPAPPEND 1
+MENU BACKGROUND /porteus.png
+MENU TITLE Porteus PXE boot menu
+
+MENU WIDTH 30
+MENU MARGIN 2
+MENU ROWS 10
+MENU HELPMSGROW 17
+MENU TIMEOUTROW 28
+MENU TABMSGROW 15
+MENU CMDLINEROW 22
+MENU HSHIFT 4
+MENU VSHIFT 5
+
+	menu color screen	37;40      #00000000 #00000000 none
+	menu color border	30;44      #00000000 #00000000 none
+	menu color title	1;36;44    #ffA32F2F #30003f07 none
+	menu color unsel	37;44      #ffBDC2D9 #00000000 none
+	menu color hotkey	1;37;44    #ff8037b7 #00000000 none
+	menu color sel		7;37;40    #ff111B78 #003f7fbf none
+	menu color hotsel	1;7;37;40  #ffaf67f7 #003f7fbf none
+	menu color scrollbar	30;44      #00000000 #00000000 none
+
+	menu color tabmsg	31;40      #ffA32222 #00000000 none
+	menu color cmdmark	1;36;40    #ffff0000 #00000000 none
+	menu color cmdline	37;40      #ffffffff #ff000000 none
+	menu color pwdborder	30;47      #ffff0000 #00000000 std
+	menu color pwdheader	31;47      #ffff0000 #00000000 std
+	menu color pwdentry	30;47      #ffff0000 #00000000 std
+	menu color timeout_msg	37;40      #ff809aef #00000000 none
+	menu color timeout	1;37;40    #ffb72f9f #00000000 none
+	menu color help		37;40      #ff666C85 #00000000 none
+	menu color msg07	37;40      #90ffffff #00000000 std
+
+
+LABEL xconf
+MENU LABEL Graphics mode (KDE)
+KERNEL /vmlinuz
+APPEND initrd=/initrd.xz vga=791 
+TEXT HELP
+    Run Porteus the best way we can.
+    Try to autoconfigure graphics
+    card and use the maximum
+    allowed resolution
+ENDTEXT
+
+LABEL lxde
+MENU LABEL Graphics mode (LXDE)
+KERNEL /vmlinuz
+APPEND initrd=/initrd.xz vga=791 lxde 
+TEXT HELP
+    Run Porteus the same as above.
+    Lightweight LXDE to be
+    launched as default desktop
+ENDTEXT
+
+LABEL cp2ram
+MENU LABEL Copy To RAM
+KERNEL /vmlinuz
+APPEND initrd=/initrd.xz vga=791 copy2ram 
+TEXT HELP
+    Run Porteus the same as above,
+    but first copy all data to RAM
+    to get a huge speed increase
+    (needs >768MB)
+ENDTEXT
+
+LABEL startx
+MENU LABEL Graphics VESA mode
+KERNEL /vmlinuz
+APPEND initrd=/initrd.xz nomodeset autoexec=vesa-mode 
+TEXT HELP
+    Run Porteus with KDE, but skip
+    the graphics card autoconfig.
+    This forces 1024x768 resolution
+    using a standard VESA driver
+ENDTEXT
+
+LABEL text
+MENU LABEL Text mode
+KERNEL /vmlinuz
+APPEND initrd=/initrd.xz autoexec=telinit~3 
+TEXT HELP
+    Run Porteus in text mode and
+    start the command prompt only
+ENDTEXT
+
+MENU SEPARATOR
+
+LABEL plop
+MENU LABEL PLoP BootManager
+KERNEL /syslinux/plpbt
+TEXT HELP
+    Run the plop boot manager.
+    This utility provides handy
+    boot-USB options for machines
+    with vintage/defective BIOS
+ENDTEXT
+
+LABEL memtest86
+MENU LABEL Run Memtest utility
+KERNEL /tools/mt86p
+TEXT HELP
+    Don't start Porteus at all, but
+    rather run the MemTest utility
+    to diagnose your computer's RAM
+    for possible errors
+ENDTEXT

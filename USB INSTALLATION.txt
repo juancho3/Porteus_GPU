@@ -1,0 +1,39 @@
+Porteus can be installed to a flash drive or hard 
+drive in several ways.
+
+From Windows:
+a) copy the contents of the ISO image to your drive
+b) navigate to the \boot folder and launch the 
+'win_start_here.hta' script
+c) click the 'Install' button
+
+video presentation:
+http://goo.gl/Sl5qB
+
+From any Linux Distribution other than Porteus:
+a) copy the contents of the ISO image to your drive
+b) navigate to the /boot folder and launch the 
+'lin_start_here.sh' script
+c) follow the on-screen instructions
+
+video presentation:
+http://goo.gl/W0STF
+
+From Porteus itself (booted from CD):
+a) launch 'Porteus Installer' from the KDE, XFCE or 
+LXDE menu, under the 'System' heading (if you are 
+prompted for the root password, it is toor)
+b) plug in your usb drive or select a partition
+on a hard drive
+c) follow the on-screen instructions 
+
+video presentations:
+http://goo.gl/lB9uL
+http://goo.gl/2noje
+
+If you run into trouble please refer to the more 
+detailed installation guide which can be found at
+/boot/docs/install.txt or our website at 
+http://goo.gl/ci4EE
+
+Porteus Team

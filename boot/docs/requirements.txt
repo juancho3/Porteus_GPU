@@ -1,0 +1,46 @@
+Porteus Requirements 64bit/KDE-4 requirements
+===============================================
+
+Porteus is not pretentious, though it requires some minimal hardware to 
+run properly. It depends on how you wish to use Porteus, of course.
+
+The most important thing is memory. You need at least 40 MB of RAM to
+boot Porteus in text mode. A more detailed description follows:
+
+
+Medium
+------
+Either an IDE connected CDROM (to boot from a CD), a USB FlashDisk
+(to boot from a mass storage device),or an internal or external
+hard disk (to boot Porteus from a hard disk).
+
+
+BIOS
+----
+Either non-emulation booting enabled (to boot from a CD)
+or USB FlashDrive booting enabled (to boot from a mass storage device)
+
+
+Memory
+------
+512 MB to run Xwindow with KDE-4
+768 MB to be able to use copy2ram cheatcode with KDE-4
+
+Lxde requirements are much lower - 256MB schould be enough for all modes.
+
+
+Processor
+---------
+Any processor with support for 64-bit instructions. Intel and AMD are
+both OK.
+
+
+Peripheral devices
+------------------
+any keyboard
+any PS/2 or USB connected mouse
+
+
+Harddisk
+--------
+No harddisk is required
